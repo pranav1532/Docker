@@ -1,0 +1,9 @@
+FROM mysql
+
+ENV MYSQL_ROOT_PASSWORD=rootpassword
+
+ENV MYSQL_DATABASE=mydatabase
+
+EXPOSE 3306
+
+CMD ["mysql","start"]

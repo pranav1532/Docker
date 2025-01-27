@@ -1,0 +1,16 @@
+FROM mysql:8.0
+
+ENV MYSQL_ROOT_PASSWORD=Moonlight
+
+ENV MYSQL_DATABASE=facebook
+
+COPY ./init.sql /docker-entrypoint-initdb.d/
+COPY init.sh/docker-entrypoint-initdb.d/
+
+EXPOSE 3306
+
+CMD ["mysql"]
+
+ENTRYPOINT-["mysql"]
+
+ENV MYSQL_ROOT_PASSWORD =$(Moonlight)

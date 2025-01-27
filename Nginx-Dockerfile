@@ -1,0 +1,12 @@
+
+FROM Ubuntu : latest
+
+RUN apt install nginx -y && apt update -y
+
+RUN cd /usr/www/html
+
+RUN touch my.txt
+
+RUN echo "Hell0" > my.txt
+
+CMD ["nginx", "-g", "daemon off;"]
